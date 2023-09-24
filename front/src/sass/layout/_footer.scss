@@ -1,0 +1,13 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 80px;
+    padding: nth($padding, 2);
+    p{
+        font-size: 12px;
+    }
+}

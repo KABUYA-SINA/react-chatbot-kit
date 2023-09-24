@@ -1,0 +1,19 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: nth($padding, 2);
+    img{
+        object-fit: cover;
+        height: 100%;
+        @include mobile{
+            width: 25%;
+        }
+        @include tablet{
+            width: 5%;
+        }
+    }
+}

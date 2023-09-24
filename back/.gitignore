@@ -1,0 +1,7 @@
+/node_modules
+images
+.env
+assets
+controllers
+models
+routes
