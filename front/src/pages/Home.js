@@ -1,29 +1,37 @@
-import React from 'react';
-import Headrer from '../components/Headrer';
+import React, { useState } from 'react';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Chatbot from 'react-chatbot-kit';
-import config from "../chatbot/config";
-import MessageParser from "../chatbot/MessageParser";
-import ActionProvider from "../chatbot/ActionProvider";
+import ChatbotBox from '../components/Chatbot';
+import { IoChatbubblesSharp } from 'react-icons/io5';
 import 'react-chatbot-kit/build/main.css';
 import '../sass/base/_base.scss';
 import '../sass/pages/_home.scss';
 
-
 const Home = () => {
+
+    const [showBot, toggleBot] = useState(false);
+    document.addEventListener("DOMContentLoaded", function () {
+        const parent = document.querySelector('#parent > div > div')
+        parent.className = "child"
+    });
+
     return (
         <div className='home'>
-            <Headrer />
+            <Header />
             <main className='main'>
-                <Chatbot
-                    config={config}
-                    messageParser={MessageParser}
-                    actionProvider={ActionProvider}
-                />
+                <button className='btn' type='button' onClick={() => toggleBot((prev) => !prev)}>
+                    <IoChatbubblesSharp size='3rem' />
+                </button>
+                {
+                    showBot && (
+                        <ChatbotBox />
+                    )
+                }
             </main>
             <Footer />
         </div>
     )
 }
 
-export default Home
+export default Home;
+

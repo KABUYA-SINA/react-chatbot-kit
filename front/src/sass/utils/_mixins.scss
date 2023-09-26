@@ -10,6 +10,11 @@
     }
 }
 
+@mixin largeOrdi {
+    @media screen and (min-width: map-get($breakpoints, largeOrdi)) {
+        @content;
+    }
+}
 @mixin display-all {
     display: flex;
     flex-direction: column;

@@ -1,11 +1,10 @@
 import React from 'react'
-import logo from '../assets/logo.webp';
 import '../sass/layout/_header.scss';
 
 const Header = () => {
     return (
         <header className='header'>
-            <img src={logo} alt='website logo' />
+            <h1>help</h1>
         </header>
     )
 }
