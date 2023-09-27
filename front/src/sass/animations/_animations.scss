@@ -1,0 +1,10 @@
+@keyframes move{
+    0% {
+        transform: translate3d(-10px, 0px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0);
+        opacity: 1;
+    }
+}
